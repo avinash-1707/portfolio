@@ -27,7 +27,7 @@ const options: Option[] = [
 export default function Togglebar() {
   const [hovered, setHovered] = useState<number | null>(null);
   return (
-    <div className="h-12 flex justify-between pr-4 w-full">
+    <div className="h-10 flex justify-between pr-4 w-full">
       <div className="flex justify-start">
         {options.map((option, idx) => (
           <motion.div
