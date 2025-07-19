@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import Link from "next/link";
-import { ModeToggle } from "./mode-toggle";
+import ThemeSwitch from "./mode-toggle";
 
 interface Option {
   name: string;
@@ -53,7 +53,7 @@ export default function Togglebar() {
           </motion.div>
         ))}
       </div>
-      <ModeToggle />
+      <ThemeSwitch />
     </div>
   );
 }
