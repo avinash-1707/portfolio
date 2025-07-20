@@ -16,7 +16,6 @@ export default function PortfolioContent() {
       className="w-3xl mx-auto p-6.5 "
     >
       <Togglebar />
-      {/* <Separator className="w-full dark:bg-neutral-800 bg-neutral-300" /> */}
       <ProfileSection />
       <Experience />
       <Projects />

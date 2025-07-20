@@ -1,5 +1,5 @@
 "use client";
-import React, { ReactNode } from "react";
+import React, { ReactNode, useEffect, useState } from "react";
 import { ContainerTextFlip } from "./ui/container-text-flip";
 import { motion } from "motion/react";
 import { FileText, Send } from "lucide-react";
@@ -9,6 +9,7 @@ import Mail from "./svgs/Mail";
 import Github from "./svgs/Github";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
 interface Social {
   icon: ReactNode;
@@ -40,6 +41,12 @@ const socials: Social[] = [
 ];
 
 export default function ProfileSection() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
   return (
     <div className="w-full py-8 my-2.5">
       <motion.img
@@ -55,22 +62,26 @@ export default function ProfileSection() {
           Hi, I'm Avinash. I am a developer from Gwalior, India
         </h1>
         <div className="text-md">
-          I ❤️ to build{" "}
+          I {mounted && theme === "dark" ? <span>🤍</span> : <span>🖤</span>} to
+          build{" "}
           <ContainerTextFlip
             words={["Products", "beautiful UIs", "AI stuff"]}
           />
         </div>
       </div>
       <div className="flex justify-start gap-3.5 mt-6">
-        <motion.button
-          whileHover={{ scale: 1.02 }}
-          whileTap={{ scale: 0.98 }}
-          transition={{ duration: 0.3 }}
-          className="flex text-neutral-800 dark:text-neutral-200 items-center px-3 py-1 hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300 border border-neutral-500 rounded-md cursor-pointer"
-        >
-          <Send className="inline-block h-3.5 w-3.5 mr-1.5" />
-          Contact me
-        </motion.button>
+        <Link href="https://x.com/ayyvinash">
+          <motion.button
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            transition={{ duration: 0.3 }}
+            className="flex text-neutral-800 dark:text-neutral-200 items-center px-3 py-1 hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300 border border-neutral-500 rounded-md cursor-pointer"
+          >
+            <Send className="inline-block h-3.5 w-3.5 mr-1.5" />
+            Contact me
+          </motion.button>
+        </Link>
+
         <motion.button
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}

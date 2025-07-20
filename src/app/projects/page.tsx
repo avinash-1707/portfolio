@@ -1,21 +1,46 @@
 "use client";
-import React from "react";
-import { Separator } from "./ui/separator";
-import Image from "next/image";
-import Github from "./svgs/Github";
-import { Globe } from "lucide-react";
-import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
-import Link from "next/link";
-import { motion } from "motion/react";
+import ThemeSwitch from "@/components/mode-toggle";
+import Github from "@/components/svgs/Github";
+import { Separator } from "@/components/ui/separator";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 import { projects } from "@/config/Projects";
-import { Button } from "./ui/button";
+import { ArrowLeft, Globe } from "lucide-react";
+import { motion } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 
-function Projects() {
+export default function Page() {
   return (
-    <div className="w-full mt-6.5">
-      <h1 className="text-3xl font-bold">Projects</h1>
+    <motion.div
+      initial={{ opacity: 0, filter: "blur(10px)" }}
+      animate={{ opacity: 1, filter: "blur(0px)" }}
+      transition={{ duration: 0.5 }}
+      className="w-3xl mx-auto p-6.5"
+    >
+      <div className="text-sm text-neutral-500 flex justify-between items-center">
+        <Link href="/">
+          <div className="dark:hover:text-neutral-400 hover:text-neutral-600">
+            <ArrowLeft className="inline-block mr-2 size-3" />
+            Go back to Homepage
+          </div>
+        </Link>
+        <ThemeSwitch />
+      </div>
+
       <Separator className="w-full my-3 dark:bg-neutral-800 bg-neutral-300" />
-      <div className="w-full my-6 grid grid-cols-2 gap-5">
+      <div className="flex flex-col gap-4 items-center mt-20 mb-15">
+        <h1 className="text-5xl font-semibold">Projects</h1>
+        <p className="text-xl text-neutral-500">
+          Some projects I poured my time, brain cells, and caffeine into
+        </p>
+      </div>
+      <Separator className="w-full my-3 dark:bg-neutral-800 bg-neutral-300" />
+      <div className="w-full my-10 grid grid-cols-2 gap-5">
         {projects.map((project, idx) => (
           <motion.div
             key={idx}
@@ -84,15 +109,6 @@ function Projects() {
           </motion.div>
         ))}
       </div>
-      <div className="w-full text-center mt-10 mb-16">
-        <Link href="/projects">
-          <Button variant="outline" className="cursor-pointer">
-            See all projects
-          </Button>
-        </Link>
-      </div>
-    </div>
+    </motion.div>
   );
 }
-
-export default Projects;
