@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ArrowLeft, Briefcase } from "lucide-react";
 import { motion } from "motion/react";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
 
