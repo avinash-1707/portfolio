@@ -10,6 +10,9 @@ const outfit = Outfit({
 export const metadata: Metadata = {
   title: "Portfolio | Avinash",
   description: "This is avinash's personal portfolio website",
+  icons: {
+    icon: "/pfpfp.jpg",
+  },
 };
 
 export default function RootLayout({
