@@ -63,8 +63,8 @@ export default function ProfileSection() {
       </div>
       <div className="flex justify-start gap-3.5 mt-6">
         <motion.button
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.99 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.3 }}
           className="flex text-neutral-800 dark:text-neutral-200 items-center px-3 py-1 hover:bg-black/10 dark:hover:bg-white/10 transition-colors duration-300 border border-neutral-500 rounded-md cursor-pointer"
         >
@@ -72,8 +72,8 @@ export default function ProfileSection() {
           Contact me
         </motion.button>
         <motion.button
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.99 }}
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.3 }}
           className="flex text-neutral-200 dark:text-neutral-800 items-center px-3 py-1 hover:bg-neutral-700 dark:hover:bg-neutral-400 transition-colors duration-300 bg-neutral-800 dark:bg-neutral-300 rounded-md cursor-pointer"
         >

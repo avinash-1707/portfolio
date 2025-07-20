@@ -53,7 +53,7 @@ export default function Skills() {
       <Separator className="w-full my-3 dark:bg-neutral-800 bg-neutral-300" />
       <div>
         {skills.map((skill, idx) => (
-          <>
+          <div key={idx}>
             <motion.div
               variants={parentVariant}
               initial="initial"
@@ -75,13 +75,13 @@ export default function Skills() {
                   whileHover={{ scale: 1.03, fontSize: "15px" }}
                   transition={{ duration: 0.3, ease: "easeInOut" }}
                   key={`tech-${idx}`}
-                  className="px-2 py-1 h-fit w-fit dark:bg-neutral-800 bg-neutral-300 rounded-md text-sm cursor-default"
+                  className="px-2 py-1 h-fit w-fit text-neutral-800 dark:text-neutral-200 dark:bg-neutral-800 bg-neutral-300 rounded-md text-sm cursor-default"
                 >
                   {tech}
                 </motion.div>
               ))}
             </div>
-          </>
+          </div>
         ))}
       </div>
     </div>

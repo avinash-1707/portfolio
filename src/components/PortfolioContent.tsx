@@ -5,6 +5,7 @@ import ProfileSection from "./ProfileSection";
 import Experience from "./Experience";
 import Skills from "./Skills";
 import { motion } from "motion/react";
+import Projects from "./Projects";
 
 export default function PortfolioContent() {
   return (
@@ -18,6 +19,7 @@ export default function PortfolioContent() {
       {/* <Separator className="w-full dark:bg-neutral-800 bg-neutral-300" /> */}
       <ProfileSection />
       <Experience />
+      <Projects />
       <Skills />
     </motion.div>
   );
