@@ -45,6 +45,7 @@ export default function Togglebar() {
                   layoutId="hover"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, ease: "easeInOut" }}
                   className="absolute h-[2px] w-full bg-black/80 dark:bg-white/80 rounded-full bottom-0"
                 ></motion.div>
               )}

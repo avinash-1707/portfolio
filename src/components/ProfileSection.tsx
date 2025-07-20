@@ -1,3 +1,4 @@
+"use client";
 import React, { ReactNode } from "react";
 import { ContainerTextFlip } from "./ui/container-text-flip";
 import { motion } from "motion/react";
