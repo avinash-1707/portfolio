@@ -56,7 +56,7 @@ export default function Page() {
             />
             <div className="py-4 px-5">
               <div className="flex justify-between items-center">
-                <h2 className="font-medium text-2xl">{project.name}</h2>
+                <h2 className="font-semibold text-2xl">{project.name}</h2>
                 <div className="flex gap-4">
                   <Tooltip key={idx} delayDuration={0}>
                     <TooltipTrigger asChild>
