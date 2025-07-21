@@ -65,7 +65,7 @@ export default function Skills() {
               <motion.div
                 variants={childVariants}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
-                className="absolute left-0 bottom-0 h-[2px] bg-white"
+                className="absolute left-0 bottom-0 h-[2px] bg-black/70 dark:bg-white/70"
               ></motion.div>
               <span>{skill.name}</span>
             </motion.div>
