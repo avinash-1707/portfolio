@@ -3,4 +3,5 @@ export interface Blog {
   description: string;
   date: string;
   tags: Array<string>;
+  url: string;
 }
