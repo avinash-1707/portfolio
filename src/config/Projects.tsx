@@ -5,7 +5,7 @@ export const projects: Project[] = [
     name: "inkognitOh!",
     description:
       "inkognitOh is a anonymous messaging platform where an user can register to get a unique message link, and can share the link to recieve anonymous messages.",
-    thumbnail: "/inkognitoh.png",
+    thumbnail: "/inkognitoh-homepage.png",
     livelink: "https://inkognit-oh.vercel.app/",
     github: "https://github.com/avinash-1707/inkognitOh",
     stack: [
