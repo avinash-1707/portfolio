@@ -10,6 +10,7 @@ import Github from "./svgs/Github";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./ui/tooltip";
 import Link from "next/link";
 import { useTheme } from "next-themes";
+import { useRouter } from "next/navigation";
 
 interface Social {
   icon: ReactNode;
@@ -43,6 +44,7 @@ const socials: Social[] = [
 export default function ProfileSection() {
   const { theme } = useTheme();
   const [mounted, setMounted] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setMounted(true);
@@ -86,6 +88,11 @@ export default function ProfileSection() {
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}
           transition={{ duration: 0.3 }}
+          onClick={() =>
+            router.push(
+              "https://drive.google.com/file/d/1DM4DfrvnCR69SkTYRNf-2A5T6GIdP9-y/view?usp=drive_link"
+            )
+          }
           className="flex text-neutral-200 dark:text-neutral-800 items-center px-3 py-1 hover:bg-neutral-700 dark:hover:bg-neutral-400 transition-colors duration-300 bg-neutral-800 dark:bg-neutral-300 rounded-md cursor-pointer"
         >
           <FileText className="inline-block text-neutral-200 dark:text-neutral-800 -rotate-12 h-3.5 w-3.5 mr-1.5" />
