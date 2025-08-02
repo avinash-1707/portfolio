@@ -22,7 +22,7 @@ export const projects: Project[] = [
     name: "Zeltra AI",
     description:
       "Zeltra AI is a llm interface which allows enterpreneurs and founders to validate and clarify their idea, and get a prompt to generate a prototype for the idea.",
-    thumbnail: "/zeltra-home.png",
+    thumbnail: "/zeltra-homepage.png",
     livelink: "https://zeltra-ai.vercel.app/",
     github: "https://github.com/avinash-1707/zeltra-ai",
     stack: [

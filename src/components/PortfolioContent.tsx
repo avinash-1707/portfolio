@@ -17,8 +17,9 @@ export default function PortfolioContent() {
     >
       <Togglebar />
       <ProfileSection />
-      <Experience />
       <Projects />
+      <Experience />
+
       <Skills />
     </motion.div>
   );
